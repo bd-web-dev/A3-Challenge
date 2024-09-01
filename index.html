@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A3 Challenge</title>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Customizing Tailwind CSS -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ABEF5F",
+              "header-grad-start": "rgba(255, 255, 255, 1)",
+              "header-grad-end": "rgba(255, 255, 255, 0)",
+              "black-1": "#212121",
+              "black-2": "#1C1C1C",
+              "nav-primary": "#494949",
+              "nav-secondary": "#737373",
+            },
+            fontFamily: {
+              manrope: "Manrope, sans-serif",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-manrope">
+    <header
+      class="w-[90vw] max-w-7xl mx-auto pt-14 bg-gradient-to-b from-header-grad-start to-header-grad-end"
+    >
+      <!-- Top row container -->
+      <div class="flex justify-between">
+        <!-- Logo Section -->
+        <div class="flex items-center gap-2 lg:w-[22%]">
+          <img
+            class="rounded-full bg-primary"
+            src="./assets/arrow-ne.png"
+            alt=""
+          />
+          <h2 class="font-extrabold text-[32px] text-black-1">Rinterio</h2>
+        </div>
+        <!-- Navigation bar -->
+        <nav class="flex items-center gap-4 lg:w-[73%] justify-end">
+          <ul class="hidden lg:flex lg:gap-9 lg:items-center">
+            <li><a href="" class="text-nav-primary font-extrabold">Home</a></li>
+            <li><a href="" class="text-nav-secondary">Services</a></li>
+            <li><a href="" class="text-nav-secondary">Portfolio</a></li>
+            <li><a href="" class="text-nav-secondary">Blog</a></li>
+            <li><a href="" class="text-nav-secondary">Contact Us</a></li>
+          </ul>
+          <img
+            class="hidden md:block rounded-full bg-white border w-12 h-12"
+            src="./assets/search.png"
+            alt=""
+          />
+          <img
+            class="hidden md:block rounded-full bg-white border w-12 h-12"
+            src="./assets/cart.png"
+            alt=""
+          />
+          <button
+            class="bg-primary rounded-[32px] px-5 py-2.5 font-extrabold text-xl text-black-2 hidden md:block"
+          >
+            Book Consult
+            <img
+              class="rounded-full bg-black-2 inline w-8 h-8"
+              src="./assets/arrow-ne-white.png"
+              alt=""
+            />
+          </button>
+          <img
+            class="rounded-full bg-white border w-12 h-12 lg:hidden"
+            src="./assets/menu.png"
+            alt=""
+          />
+        </nav>
+      </div>
+    </header>
+  </body>
+</html>
