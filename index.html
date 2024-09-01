@@ -19,13 +19,14 @@
         theme: {
           extend: {
             colors: {
-              primary: "#ABEF5F",
+              "green-primary": "rgba(171, 239, 95, 1)",
+              "green-secondary": "rgba(171, 239, 95, 0.5)",
               "header-grad-start": "rgba(255, 255, 255, 1)",
               "header-grad-end": "rgba(255, 255, 255, 0)",
               "black-1": "#212121",
               "black-2": "#1C1C1C",
-              "nav-primary": "#494949",
-              "nav-secondary": "#737373",
+              "color-primary": "#494949",
+              "color-secondary": "#737373",
             },
             fontFamily: {
               manrope: "Manrope, sans-serif",
@@ -40,11 +41,11 @@
       class="w-[90vw] max-w-7xl mx-auto pt-14 bg-gradient-to-b from-header-grad-start to-header-grad-end"
     >
       <!-- Top row container -->
-      <div class="flex justify-between">
+      <section class="flex justify-between mb-8">
         <!-- Logo Section -->
         <div class="flex items-center gap-2 lg:w-[22%]">
           <img
-            class="rounded-full bg-primary"
+            class="rounded-full bg-green-primary"
             src="./assets/arrow-ne.png"
             alt=""
           />
@@ -53,11 +54,13 @@
         <!-- Navigation bar -->
         <nav class="flex items-center gap-4 lg:w-[73%] justify-end">
           <ul class="hidden lg:flex lg:gap-9 lg:items-center">
-            <li><a href="" class="text-nav-primary font-extrabold">Home</a></li>
-            <li><a href="" class="text-nav-secondary">Services</a></li>
-            <li><a href="" class="text-nav-secondary">Portfolio</a></li>
-            <li><a href="" class="text-nav-secondary">Blog</a></li>
-            <li><a href="" class="text-nav-secondary">Contact Us</a></li>
+            <li>
+              <a href="" class="text-color-primary font-extrabold">Home</a>
+            </li>
+            <li><a href="" class="text-color-secondary">Services</a></li>
+            <li><a href="" class="text-color-secondary">Portfolio</a></li>
+            <li><a href="" class="text-color-secondary">Blog</a></li>
+            <li><a href="" class="text-color-secondary">Contact Us</a></li>
           </ul>
           <img
             class="hidden md:block rounded-full bg-white border w-12 h-12"
@@ -70,7 +73,7 @@
             alt=""
           />
           <button
-            class="bg-primary rounded-[32px] px-5 py-2.5 font-extrabold text-xl text-black-2 hidden md:block"
+            class="bg-green-primary rounded-[32px] px-5 py-2.5 font-extrabold text-xl text-black-2 hidden md:block"
           >
             Book Consult
             <img
@@ -85,7 +88,34 @@
             alt=""
           />
         </nav>
-      </div>
+      </section>
+      <!-- Banner -->
+      <section class="space-y-4">
+        <img class="w-3/4 mx-auto" src="./assets/banner.png" alt="" />
+        <!-- Text Section -->
+        <div class="text-center space-y-4">
+          <h1
+            class="text-black-1 text-3xl md:text-4xl lg:text-6xl font-extrabold"
+          >
+            A barn house of this design has a striking appearance
+          </h1>
+          <p class="text-color-primary text-sm md:text-base font-medium">
+            The barn house captivates with its blend of rustic charm and modern
+            sophistication, featuring weathered wood, sleek metal accents, and
+            large windows that flood the space with natural light.
+          </p>
+          <button
+            class="bg-green-secondary rounded-[32px] px-5 py-2.5 font-bold text-xl text-black-1"
+          >
+            View Details
+            <img
+              class="rounded-full bg-green-primary inline w-8 h-8"
+              src="./assets/arrow-ne.png"
+              alt=""
+            />
+          </button>
+        </div>
+      </section>
     </header>
   </body>
 </html>
